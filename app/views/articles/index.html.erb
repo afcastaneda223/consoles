@@ -3,10 +3,10 @@
       <% @articles.each do |article| %>
         <div class="card m-0 p-0 artcont">
           <div class="row g-0">
-          <div class="col-md-6 img-fluid">
+          <div class="col-lg-6">
             <%= image_tag(article.image, {:class => "img-fluid"}) %>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="card-body ">
               <h5 class="card-title orange text-decoration-none">
               <%= link_to article.title, article %>

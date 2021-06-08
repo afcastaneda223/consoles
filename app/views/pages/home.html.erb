@@ -10,3 +10,33 @@
             </div>
     </div>
 </div>
+<div class="card-group">
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(1).articles.last.image, {:class => "img-fluid car-img-top"}) %>
+        <div class="card-img-overlay">
+            <h5 class="card-title"> <%= Category.find(1).name %></h5>
+            <p class="card-text"><%= Category.find(1).articles.last.title %></p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(2).articles.last.image, {:class => "img-fluid car-img-top"}) %>
+        <div class="card-img-overlay">
+            <h5 class="card-title"> <%= Category.find(2).name %></h5>
+            <p class="card-text"><%= Category.find(2).articles.last.title %></p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(3).articles.last.image, {:class => "img-fluid car-img-top"}) %>
+        <div class="card-img-overlay">
+            <h5 class="card-title"> <%= Category.find(3).name %></h5>
+            <p class="card-text"><%= Category.find(3).articles.last.title %></p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(4).articles.last.image, {:class => "img-fluid car-img-top"}) %>
+        <div class="card-img-overlay">
+            <h5 class="card-title"> <%= Category.find(4).name %></h5>
+            <p class="card-text"><%= Category.find(4).articles.last.title %></p>
+        </div>
+    </div>
+</div>
