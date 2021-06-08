@@ -1,0 +1,66 @@
+<h1>Articles</h1>
+
+<table class="table table-light table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>User id</th>
+      <th>category id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.body %></td>
+        <td><%= article.user_id %></td>
+        <td><%= article.category.name %></td>
+        <td><%= link_to 'Show', article, class: "btn btn-dark" %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), class: "btn btn-dark" %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path, class: "btn btn-primary my-3" %>
+
+
+<div class="container-fluid mb-5">
+  <div class="row">
+      <% @articles.each do |article| %>
+        <div class="card m-0 p-0" style="max-width: 50%">
+          <div class="row g-0">
+          <div class="col-md-6 img-fluid">
+            <%= image_tag(article.image, {:class => "img-fluid"}) %>
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title orange"><%= article.title %></h5>
+              <p class="card-text"><%= article.body %></p>
+              <p class="card-text"><small class="text-muted"><%= article.category.name %></small></p>
+              <div class="position-absolute bottom-0 end-0 mb-3 mx-2">
+                <%= link_to like_article_path(article), method: :put, class: "like btn btn-primary" do %>
+                    <i class="fas fa-thumbs-up"></i>
+                    <span class="badge"> <%= article.get_upvotes.size %></span>
+                <% end %>
+                <%= link_to unlike_article_path(article), method: :put, class: "unlike btn btn-danger" do %>
+                    <i class="far fa-thumbs-down"></i>
+                    <span class="badge"> <%= article.get_downvotes.size %></span>
+                <% end %>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+

@@ -1,0 +1,12 @@
+<div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0">
+            <div class="card bg-dark text-white m-0 p-0">
+                <%= image_tag(@articles.first.image, {:class => "img-fluid"}) %>
+                <div class="card-img-overlay ">
+                    <h5 class="card-title orange"><%= @articles.first.title %></h5>
+                    <p class="card-text"><%= @articles.first.body %></p>
+                    <p class="card-text"><%= @articles.first.category.name %></p>
+                </div>
+            </div>
+    </div>
+</div>

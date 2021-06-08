@@ -5,3 +5,53 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!(
+    email: 'a@a.com',
+    password: '123456',
+    password_confirmation: '123456'
+)
+
+Category.create!(name: 'Play Station', priority: "1")
+Category.create!(name: 'X box', priority: "2")
+Category.create!(name: 'Nintendo Switch', priority: "3")
+Category.create!(name: 'Gamer PC', priority: "4")
+
+
+5.times do |i|
+ps = Article.new(
+    title: "Play Station article #{i}",
+    body: 'asdasdasdsar',
+    category: Category.find(1),
+    user: User.first
+)
+xbox = Article.new(
+    title: "Xbox article #{i}",
+    body: 'asdasdasdsar',
+    category: Category.find(2),
+    user: User.first
+)
+nintendo = Article.new(
+    title: "Nintendo article #{i}",
+    body: 'asdasdasdsar',
+    category: Category.find(3),
+    user: User.first
+)
+gamer = Article.new(
+    title: "Gamer PC article #{i}",
+    body: 'asdasdasdsar',
+    category: Category.find(4),
+    user: User.first
+)
+
+ps.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "#{i}_ps_image.jpg")
+xbox.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "#{i}_xbox_image.jpg")
+nintendo.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "#{i}_nintendo_image.jpg")
+gamer.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "#{i}_gamer_image.jpg")
+
+ps.save
+xbox.save
+nintendo.save
+gamer.save
+
+end

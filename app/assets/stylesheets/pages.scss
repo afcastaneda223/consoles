@@ -1,0 +1,32 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color: rgb(78, 68, 62);
+  font-family: "Chivo", sans-serif;
+  // font-family: "Lato", sans-serif;
+}
+
+.orange {
+  color: rgb(239, 97, 54);
+  * {
+    color: rgb(239, 97, 54);
+  }
+}
+
+.dot {
+  font-size: small;
+}
+
+#footer {
+  background-color: rgb(78, 68, 62);
+}
+
+.navbar {
+  background-color: white;
+  font-family: "Chivo", sans-serif;
+}
+
+.social {
+  font-size: large;
+}
