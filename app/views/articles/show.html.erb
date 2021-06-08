@@ -1,29 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="card m-0 p-0" >
+  <div class="row m-0 p-0">
+    <div class="col-md-6 m-0 p-0">
+  <%= image_tag(@article.image, {:class => "img-fluid car-img-top"}) %>
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title orange"><%= @article.title %></h5>
+        <p class="card-text"><%= @article.body %></p>
+        <p class="card-text"><small class="text-muted">User:<%= current_user.email %></small></p>
+        <p class="card-text"><small class="text-muted">Category:<%= @article.category.name %></small></p>
+        <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary my-3" %>
+        <%= link_to 'Back', articles_path, class: "btn btn-secondary my-3" %>
+        <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @article.user_id %>
-</p>
-
-<p>
-  <strong>Cateories:</strong>
-  <%= @article.category_id %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @article.image %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

@@ -4,6 +4,7 @@
 body {
   background-color: rgb(78, 68, 62);
   font-family: "Chivo", sans-serif;
+  text-overflow: ellipsis;
   // font-family: "Lato", sans-serif;
 }
 
@@ -29,4 +30,19 @@ body {
 
 .social {
   font-size: large;
+}
+
+.updatebtn {
+  * {
+    color: white;
+  }
+}
+
+.artcont {
+  max-width: 50%;
+  * {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }

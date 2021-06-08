@@ -1,5 +1,12 @@
-<h1>New Article</h1>
+<div class="container-fluid p-5 mt-5">
+  <div class="card">
+    <div class="card-header text-center">
+        <h1>New Article</h1>
+    </div>
+    <div class="card-body">
+        <%= render 'form', article: @article %>
+        <%= link_to 'Back', articles_path, class: "btn btn-primary my-3" %>
+    </div>
+  </div>
+</div>
 
-<%= render 'form', article: @article %>
-
-<%= link_to 'Back', articles_path %>
