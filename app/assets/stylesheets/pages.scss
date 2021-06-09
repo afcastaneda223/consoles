@@ -25,20 +25,17 @@ body {
   font-size: large;
 }
 
-.artcont {
+.artcont,
+p {
   max-width: 50%;
-  p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.orange {
+.orange,
+h5 {
   color: rgb(239, 97, 54);
-  h5 {
-    color: rgb(239, 97, 54);
-  }
 }
 
 .cont {
