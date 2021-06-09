@@ -28,13 +28,15 @@ body {
 .artcont,
 p {
   max-width: 50%;
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .orange,
-h5 {
+h5,
+i {
   color: rgb(239, 97, 54);
 }
 
