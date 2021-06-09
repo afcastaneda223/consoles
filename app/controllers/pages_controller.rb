@@ -4,11 +4,11 @@ class PagesController < ApplicationController
     @articles = Article.all.order(cached_votes_score: :desc)
   end
 
-  def playstation;
+  def playstation
     @articles = Article.all.order('created_at DESC')
   end
 
-  def xbox;
+  def xbox
     @articles = Article.all.order('created_at DESC')
   end
 
@@ -25,6 +25,4 @@ class PagesController < ApplicationController
   def set_cats
     @cats = Category.all
   end
-
 end
-

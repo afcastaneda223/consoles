@@ -8,13 +8,6 @@ body {
   // font-family: "Lato", sans-serif;
 }
 
-.orange {
-  color: rgb(239, 97, 54);
-  * {
-    color: rgb(239, 97, 54);
-  }
-}
-
 .dot {
   font-size: small;
 }
@@ -32,19 +25,17 @@ body {
   font-size: large;
 }
 
-.updatebtn {
-  * {
-    color: white;
-  }
+.artcont,
+p {
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.artcont {
-  max-width: 50%;
-  * {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+.orange,
+h5 {
+  color: rgb(239, 97, 54);
 }
 
 .cont {
