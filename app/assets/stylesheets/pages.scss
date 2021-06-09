@@ -8,13 +8,6 @@ body {
   // font-family: "Lato", sans-serif;
 }
 
-.orange {
-  color: rgb(239, 97, 54);
-  * {
-    color: rgb(239, 97, 54);
-  }
-}
-
 .dot {
   font-size: small;
 }
@@ -44,6 +37,13 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+}
+
+.orange {
+  color: rgb(239, 97, 54);
+  * {
+    color: rgb(239, 97, 54);
   }
 }
 
