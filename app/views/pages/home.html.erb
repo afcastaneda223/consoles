@@ -1,0 +1,55 @@
+<div class="container-fluid m-0 p-0 ">
+    <div class="row m-0 p-0 homecont">
+            <div class="card bg-dark text-white m-0 p-0 ">
+                <%= image_tag(@articles.first.image, {:class => "img-fluid homecont"}) %>
+                <div class="card-img-overlay">
+                        
+                    <h5 class="card-title orange position-absolute bottom-0 mb-5">
+                        <%= link_to @articles.first.title, articles_path, class: "nav-link cart-title orange m-0 p-0" %>
+                    </h5>
+                    <p class="card-text position-absolute bottom-0 end-0 pb-3 px-2 "><%= @articles.first.category.name %></p>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="card-group mb-5">
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(1).articles.last.image, {:class => "img-fluid imgmain"}) %>
+        <div class="card-img-overlay">
+            <h5>
+            <%= link_to Category.find(1).name, pages_playstation_path, class: "nav-link cart-title orange m-0 p-0" %>
+            </h5>
+            <p class="card-text position-absolute bottom-0 end-0 pb-3 px-2"><%= Category.find(1).articles.last.title %></p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(2).articles.last.image, {:class => "img-fluid imgmain"}) %>
+        <div class="card-img-overlay">
+            <h5>
+            <%= link_to Category.find(2).name, pages_xbox_path, class: "nav-link cart-title orange m-0 p-0" %>
+            </h5>
+            <p class="card-text  position-absolute bottom-0 end-0 pb-3 px-2"><%= Category.find(2).articles.last.title %></p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(3).articles.last.image, {:class => "img-fluid imgmain"}) %>
+        <div class="card-img-overlay">
+            <h5>
+            <%= link_to Category.find(3).name, pages_nintendo_path, class: "nav-link cart-title orange m-0 p-0" %>
+            </h5>
+            <p class="card-text position-absolute bottom-0 end-0 pb-3 px-2"><%= Category.find(3).articles.last.title %></p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <%= image_tag(Category.find(4).articles.last.image, {:class => "img-fluid imgmain"}) %>
+        <div class="card-img-overlay">
+            <h5>
+            <%= link_to Category.find(4).name, pages_gamerpc_path, class: "nav-link cart-title orange m-0 p-0" %>
+            </h5>
+            <p class="card-text position-absolute bottom-0 end-0 pb-3 px-2">
+            <%= Category.find(4).articles.last.title %>
+            </p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,35 @@
+<div class="container-fluid mb-5"></div>
+  <div class="row">
+
+      <% @articles.each do |article| %>
+          <% if Category.find(1) == article.category %>
+        <div class="card m-0 p-0 artcont">
+          <div class="row g-0">
+          <div class="col-lg-6">
+            <%= image_tag(article.image, {:class => "img-fluid"}) %>
+          </div>
+          <div class="col-lg-6">
+            <div class="card-body ">
+              <h5 class="card-title orange text-decoration-none">
+              <%= link_to article.title, article %>
+              </h5>
+              <p class="card-text"><%= article.body %></p>
+              <p class="card-text"><small class="text-muted"><%= article.category.name %></small></p>
+              <div class="position-absolute bottom-0 end-0 mb-3 mx-2 ">
+                <%= link_to like_article_path(article), method: :put, class: "like btn btn-primary" do %>
+                    <i class="fas fa-thumbs-up"></i>
+                    <span class="badge"> <%= article.get_upvotes.size %></span>
+                <% end %>
+                <%= link_to unlike_article_path(article), method: :put, class: "unlike btn btn-danger" do %>
+                    <i class="far fa-thumbs-down"></i>
+                    <span class="badge"> <%= article.get_downvotes.size %></span>
+                <% end %>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
