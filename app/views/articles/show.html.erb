@@ -7,7 +7,7 @@
       <div class="card-body">
         <h5 class="card-title orange"><%= @article.title %></h5>
         <p class="card-text"><%= @article.body %></p>
-        <p class="card-text"><small class="text-muted">Category:<%= @article.category.name %></small></p>
+        <p class="card-text">Created by: <%= @article.user.email %></p>
         <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary my-3" %>
         <%= link_to 'Back', articles_path, class: "btn btn-secondary my-3" %>
         <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>

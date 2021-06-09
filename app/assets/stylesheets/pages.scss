@@ -5,7 +5,9 @@ body {
   background-color: rgb(78, 68, 62);
   font-family: "Chivo", sans-serif;
   text-overflow: ellipsis;
-  // font-family: "Lato", sans-serif;
+  p {
+    font-family: "Lato", sans-serif;
+  }
 }
 
 .dot {
@@ -26,12 +28,14 @@ body {
   font-size: large;
 }
 
-.artcont,
-p {
+.artcont {
   max-width: 50%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 80%;
+  }
 }
 
 .orange,

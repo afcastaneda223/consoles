@@ -12,7 +12,9 @@
             </div>
     </div>
 </div>
-<div class="card-group mb-5">
+
+<div class="row row-cols-1 row-cols-lg-4 g-0">
+  <div class="col">
     <div class="card bg-dark text-white">
         <%= image_tag(Category.find(1).articles.last.image, {:class => "img-fluid imgmain"}) %>
         <div class="card-img-overlay">
@@ -22,6 +24,8 @@
             <p class="card-text position-absolute bottom-0 end-0 pb-3 px-2"><%= Category.find(1).articles.last.title %></p>
         </div>
     </div>
+  </div>
+  <div class="col">
     <div class="card bg-dark text-white">
         <%= image_tag(Category.find(2).articles.last.image, {:class => "img-fluid imgmain"}) %>
         <div class="card-img-overlay">
@@ -31,6 +35,8 @@
             <p class="card-text  position-absolute bottom-0 end-0 pb-3 px-2"><%= Category.find(2).articles.last.title %></p>
         </div>
     </div>
+  </div>
+  <div class="col">
     <div class="card bg-dark text-white">
         <%= image_tag(Category.find(3).articles.last.image, {:class => "img-fluid imgmain"}) %>
         <div class="card-img-overlay">
@@ -40,6 +46,8 @@
             <p class="card-text position-absolute bottom-0 end-0 pb-3 px-2"><%= Category.find(3).articles.last.title %></p>
         </div>
     </div>
+  </div>
+  <div class="col">
     <div class="card bg-dark text-white">
         <%= image_tag(Category.find(4).articles.last.image, {:class => "img-fluid imgmain"}) %>
         <div class="card-img-overlay">
@@ -51,5 +59,7 @@
             </p>
         </div>
     </div>
+  </div>
 </div>
 
+<br>
