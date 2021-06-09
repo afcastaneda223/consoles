@@ -1,0 +1,14 @@
+<div class="container-fluid p-5 mt-5 cont">
+  <div class="card">
+    <div class="card-header text-center">
+        <h1>Edit Article</h1>
+    </div>
+    <div class="card-body">
+        <%= render 'form', article: @article %>
+
+        <%= link_to 'Show', @article, class: "btn btn-primary my-3" %>
+        <%= link_to 'Back', articles_path, class: "btn btn-secondary my-3" %>
+        <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>
