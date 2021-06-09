@@ -1,6 +1,6 @@
 # Consoles article page
 
-> This repo includes code for an article of game consoles app with log in capabilitys, as well as add new articles with images and voting system.
+> This repo includes code for an article of game consoles app with log in capabilities, as well as add new articles with images and a voting system.
 
 ## Built With
 
