@@ -1,6 +1,6 @@
-# Scaffold for social media app with Ruby on Rails
+# Consoles article page
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This repo includes code for an article of game consoles app with log in capabilitys, as well as add new articles with images and voting system.
 
 ## Built With
 
