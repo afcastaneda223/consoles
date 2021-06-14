@@ -3,8 +3,8 @@
       <% @articles.each do |article| %>
         <div class="card m-0 p-0 artcont">
           <div class="row g-0">
-          <div class="col-lg-6">
-            <%= image_tag(article.image, {:class => "img-fluid"}) %>
+          <div class="col-lg-6 artimg">
+            <%= image_tag(article.image.variant(resize_to_limit: [500,500]), {:class => "img-fluid"}) %>
           </div>
           <div class="col-lg-6">
             <div class="card-body">

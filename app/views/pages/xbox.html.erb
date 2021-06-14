@@ -5,8 +5,8 @@
           <% if Category.find(2) == article.category %>
         <div class="card m-0 p-0 artcont">
           <div class="row g-0">
-          <div class="col-lg-6">
-            <%= image_tag(article.image, {:class => "img-fluid"}) %>
+          <div class="col-lg-6 artimg">
+            <%= image_tag(article.image.variant(resize_to_limit: [500,500]), {:class => "img-fluid"}) %>
           </div>
           <div class="col-lg-6">
             <div class="card-body ">
@@ -14,6 +14,7 @@
               <%= link_to article.title, article, class: "orange" %>
               </h5>
               <p class="card-text"><%= article.body %></p>
+              <p class="card-text">Created by: <%= article.user.email %></p>
               <p class="card-text"><small class="text-muted"><%= article.category.name %></small></p>
               <div class="position-absolute bottom-0 end-0 mb-3 mx-2 ">
                 <%= link_to like_article_path(article), method: :put, class: "like btn btn-primary" do %>
