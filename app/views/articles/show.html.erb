@@ -1,7 +1,7 @@
 <div class="card m-0 p-0" >
   <div class="row m-0 p-0">
-    <div class="col-lg-6 m-0 p-0 artshow">
-  <%= image_tag(@article.image.variant(resize_to_limit: [600,600]), {:class => "img-fluid"}) %>
+    <div class="col-lg-6 m-0 p-0">
+  <%= image_tag(@article.image.variant(resize: '900x500!'), {:class => "img-fluid"}) %>
     </div>
     <div class="col-lg-6">
       <div class="card-body">

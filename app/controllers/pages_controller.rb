@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
-  before_action :set_cats
   def home
     @articles = Article.all.order(cached_votes_score: :desc)
+    @categories = Category.all
   end
 
   def playstation
@@ -20,9 +20,4 @@ class PagesController < ApplicationController
     @articles = Article.all.order('created_at DESC')
   end
 
-  private
-
-  def set_cats
-    @cats = Category.all
-  end
 end
