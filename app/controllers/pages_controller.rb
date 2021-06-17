@@ -19,5 +19,4 @@ class PagesController < ApplicationController
   def gamerpc
     @articles = Article.all.order('created_at DESC')
   end
-
 end
