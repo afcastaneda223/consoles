@@ -12,9 +12,7 @@ module PagesHelper
     end
   end
 
- def category_article(category_id)
- Category.find(category_id).articles.eager_load(image_attachment: :blob)
+  def category_article(category_id)
+    Category.find(category_id).articles.eager_load(image_attachment: :blob)
+  end
 end
-
-end
-

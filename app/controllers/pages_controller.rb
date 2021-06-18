@@ -5,18 +5,18 @@ class PagesController < ApplicationController
   end
 
   def playstation
-    @articles = Article.where("category_id = 1").eager_load(:user, :category, image_attachment: :blob)
+    @articles = Article.where('category_id = 1').eager_load(:user, :category, image_attachment: :blob)
   end
 
   def xbox
-    @articles = Article.where("category_id = 2").eager_load(:user, :category, image_attachment: :blob)
+    @articles = Article.where('category_id = 2').eager_load(:user, :category, image_attachment: :blob)
   end
 
   def nintendo
-    @articles = Article.where("category_id = 3").eager_load(:user, :category, image_attachment: :blob)
+    @articles = Article.where('category_id = 3').eager_load(:user, :category, image_attachment: :blob)
   end
 
   def gamerpc
-    @articles = Article.where("category_id = 4").eager_load(:user, :category, image_attachment: :blob)
+    @articles = Article.where('category_id = 4').eager_load(:user, :category, image_attachment: :blob)
   end
 end
