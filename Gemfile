@@ -22,7 +22,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'acts_as_votable', '~> 0.13.1'
-gem 'aws-sdk-s3', require: false
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'devise', '~> 4.8'
 gem 'simple_form', '~> 5.1'
@@ -36,6 +35,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+  gem 'aws-sdk-s3', require: false
+
 end
 
 group :development do
