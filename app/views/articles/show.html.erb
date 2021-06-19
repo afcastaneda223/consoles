@@ -16,4 +16,34 @@
   </div>
 </div>
 
+<div class="container-fluid p-0 ">
+  <div class="card">
+    <div class="card-body ">
+      <%= form_with model: [@article, @comment], local: true do |f| %>
+        <div class="form-inputs container-fluid cont ">
+          <%= f.text_field :body, {:class => "form-inputs my-3 form-control form-inline text-center "}%>
+        </div>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <%= f.submit "Comment", {:class => "btn btn-primary  "} %>
+        </li>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 text-center">
+  <div class="card">
+  <div class="card-body">
+  <% @comments.each do |comment| %>
+  <h4>
+    [<%= comment.created_at.strftime("%I:%M %p") %>] <%= comment.user.username %>: <%= comment.body %>
+  </h4>
+  <br>
+<% end %>
+  </div>
+  </div>
+</div>
 

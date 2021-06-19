@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(
-    email: 'a@a.com',
+    email: 'test@test.com',
     password: '123456',
     password_confirmation: '123456'
 )
@@ -18,7 +18,7 @@ Category.create!(name: 'Nintendo Switch', priority: "3")
 Category.create!(name: 'Gamer PC', priority: "4")
 
 
-5.times do |i|
+3.times do |i|
 ps = Article.new(
     title: "Play Station article #{i}",
     body: "Lorem Ipsum is simply dummy 
