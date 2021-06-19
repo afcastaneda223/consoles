@@ -1,6 +1,6 @@
 # Consoles article page
 
-> This repo includes code for an article of game consoles app with log in capabilities, as well as add new articles with images and a voting system. The Consoles logo takes you to the home page where you can find the big image of the most voted article, under it you will find the 4 cateogies with the last article created as background. In the navbar you will find the 4 categories and either log in or sign in if you are not loged in, as son as you are loged in the navbar will display a full list of articles, a link to create a new article and as well your menu to edit your account or sign out. on the view of each particular article you can create a comment that will be displayed with time and user wich will be the begining of the email.
+> This repo includes code for an article of game consoles app with log in capabilities, as well as add new articles with images and a voting system. The Consoles logo takes you to the home page where you can find the big image of the most voted article, under it you will find the four cateogies with the last article created as background. In the navbar you will find the 4 categories and either log in or sign in if you are not loged in, as son as you are loged in the navbar will display a full list of articles, a link to create a new article and as well your menu to edit your account or sign out. on the view of each particular article you can create a comment that will be displayed with time and user wich will be the begining of the email.
 
 ![screenshot](./lib/assets/consoles.png)
 
