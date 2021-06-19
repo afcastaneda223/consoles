@@ -25,6 +25,9 @@ gem 'acts_as_votable', '~> 0.13.1'
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'devise', '~> 4.8'
 gem 'simple_form', '~> 5.1'
+gem 'aws-sdk', '~> 3'
+gem 'aws-sdk-rails', '~> 3'
+gem 'aws-sdk-s3', '~> 1'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 # Reduces boot times through caching; required in config/boot.rb
@@ -32,7 +35,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'aws-sdk-s3', require: false
+
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
