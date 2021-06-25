@@ -15,7 +15,7 @@
 <div class="container-fluid">
     <div class="row">
         <% @categories.each do |category| %>
-        <div class="col-md-3 m-0 p-0">
+        <div class="col-xl-3 m-0 p-0">
             <div class="card bg-dark text-white">
                 <%= image_tag( category_article(category.id).last.image.variant(resize: '600x400!'), {:class => "img-fluid imgmain"}) %>
                 <div class="card-img-overlay">
