@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       put "like" => "articles#upvote"
       put "unlike" => "articles#downvote"
     end
+    post 'comments', to: 'comments#create'
   end
   resources :categories
   devise_for :users

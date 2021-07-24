@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(
-    email: 'a@a.com',
+    email: 'test@test.com',
     password: '123456',
     password_confirmation: '123456'
 )
@@ -18,28 +18,48 @@ Category.create!(name: 'Nintendo Switch', priority: "3")
 Category.create!(name: 'Gamer PC', priority: "4")
 
 
-5.times do |i|
+3.times do |i|
 ps = Article.new(
     title: "Play Station article #{i}",
-    body: 'asdasdasdsar',
+    body: "Lorem Ipsum is simply dummy 
+    text of the printing and typesetting 
+    industry. Lorem Ipsum has been the industry's 
+    standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of 
+    type and scrambled it to make a type specimen book.",
     category: Category.find(1),
     user: User.first
 )
 xbox = Article.new(
     title: "Xbox article #{i}",
-    body: 'asdasdasdsar',
+    body: "Lorem Ipsum is simply dummy 
+    text of the printing and typesetting 
+    industry. Lorem Ipsum has been the industry's 
+    standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of 
+    type and scrambled it to make a type specimen book.",
     category: Category.find(2),
     user: User.first
 )
 nintendo = Article.new(
     title: "Nintendo article #{i}",
-    body: 'asdasdasdsar',
+    body: "Lorem Ipsum is simply dummy 
+    text of the printing and typesetting 
+    industry. Lorem Ipsum has been the industry's 
+    standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of 
+    type and scrambled it to make a type specimen book.",
     category: Category.find(3),
     user: User.first
 )
 gamer = Article.new(
     title: "Gamer PC article #{i}",
-    body: 'asdasdasdsar',
+    body: "Lorem Ipsum is simply dummy 
+    text of the printing and typesetting 
+    industry. Lorem Ipsum has been the industry's 
+    standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of 
+    type and scrambled it to make a type specimen book.",
     category: Category.find(4),
     user: User.first
 )

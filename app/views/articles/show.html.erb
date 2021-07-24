@@ -1,14 +1,13 @@
 <div class="card m-0 p-0" >
   <div class="row m-0 p-0">
-    <div class="col-md-6 m-0 p-0">
-  <%= image_tag(@article.image, {:class => "img-fluid car-img-top"}) %>
+    <div class="col-lg-6 m-0 p-0">
+  <%= image_tag(@article.image.variant(resize: '900x500!'), {:class => "img-fluid"}) %>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <div class="card-body">
-        <h5 class="card-title orange"><%= @article.title %></h5>
-        <p class="card-text"><%= @article.body %></p>
-        <p class="card-text"><small class="text-muted">User:<%= current_user.email %></small></p>
-        <p class="card-text"><small class="text-muted">Category:<%= @article.category.name %></small></p>
+        <h4 class="card-title orange"><%= @article.title %></h4>
+        <h6 class="card-text fs-5 fw-light"><%= @article.body %></h6>
+        <p class="card-text">Created by: <%= @article.user.email %></p>
         <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary my-3" %>
         <%= link_to 'Back', articles_path, class: "btn btn-secondary my-3" %>
         <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
@@ -17,4 +16,34 @@
   </div>
 </div>
 
+<div class="container-fluid p-0 ">
+  <div class="card">
+    <div class="card-body ">
+      <%= form_with model: [@article, @comment], local: true do |f| %>
+        <div class="form-inputs container-fluid cont ">
+          <%= f.text_field :body, {:class => "form-inputs my-3 form-control form-inline text-center "}%>
+        </div>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <%= f.submit "Comment", {:class => "btn btn-primary  "} %>
+        </li>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 text-center">
+  <div class="card">
+  <div class="card-body">
+  <% @comments.each do |comment| %>
+  <h4>
+    [<%= comment.created_at.strftime("%I:%M %p") %>] <%= comment.user.username %>: <%= comment.body %>
+  </h4>
+  <br>
+<% end %>
+  </div>
+  </div>
+</div>
 
