@@ -4,11 +4,14 @@ class ArticlesController < ApplicationController
   before_action :correct_user, only: %i[edit update destroy]
   # GET /articles or /articles.json
   def index
-    @articles = Article.all.order(cached_votes_score: :desc)
+    @articles = Article.eager_load(:user, :category, image_attachment: :blob).order(cached_votes_score: :desc)
   end
 
   # GET /articles/1 or /articles/1.json
-  def show; end
+  def show
+    @comment = Comment.new
+    @comments = @article.comments.order('created_at DESC')
+  end
 
   # GET /articles/new
   def new

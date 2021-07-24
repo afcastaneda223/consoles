@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: rgb(78, 68, 62);
+  font-family: "Chivo", sans-serif;
+  text-overflow: ellipsis;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dot {
+  font-size: small;
+}
+
+.like {
+  color: white;
+  background-color: rgb(78, 68, 62);
+}
+
+.unlike {
+  color: white;
+  background-color: rgb(239, 97, 54);
+}
+
+#footer {
+  background-color: rgb(78, 68, 62);
+  font-size: small;
+}
+
+.navbar {
+  background-color: white;
+}
+
+.social {
+  font-size: large;
+}
+
+.orange,
+h5 {
+  color: rgb(239, 97, 54);
+}
+
+.cont {
+  max-width: 60%;
+}
+
+.imgmain {
+  opacity: 0.9;
+}
+
+.bigimgcont {
+  max-height: 500px;
+}

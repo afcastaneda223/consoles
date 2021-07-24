@@ -1,7 +1,7 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
   <div class="container-fluid">
       <%= link_to root_path, class: "navbar-brand" do %>
-      <h5>Consoles <i class="fas fa-circle orange dot"></i></h5>
+      <h4>Consoles <i class="fas fa-circle orange dot"></i></h4>
       <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,6 +20,7 @@
         <li class="nav-item">
           <%= link_to 'Gamer Pc', pages_gamerpc_path, class: "nav-link" %>
         </li>
+        
       </ul>
       <form class="d-flex">
       <ul class="navbar-nav ml-auto">
@@ -46,6 +47,7 @@
           </ul>
         </li>
         <% else %>
+          <li><hr class="dropdown-divider"></li>
           <li class="nav-item">
             <%= link_to 'Log in', new_user_session_path, class: 'nav-link'  %>
           </li>
